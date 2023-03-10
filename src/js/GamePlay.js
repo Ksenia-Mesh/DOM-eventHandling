@@ -5,7 +5,7 @@ import Sprite from './Sprite';
 
 export default class GamePlay {
   constructor() {
-    this.size = 4; // кол-во ячеек в массиве
+    this.size = 4;
     this.modalEl = document.getElementById('modal');
     this.countDead = null;
     this.countLost = null;
@@ -74,11 +74,11 @@ export default class GamePlay {
 
   checkWinner() {
     if (this.countDead.textContent == 5) {
-      this.showWinner('🍾 Победа! 🍾');
+      this.showWinner('Вы выиграли');
     }
 
     if (this.countLost.textContent > 5) {
-      this.showWinner('Вы проиграли!');
+      this.showWinner('Проигрыш');
     }
   }
 
